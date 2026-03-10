@@ -14,25 +14,21 @@ function Home() {
                 Your Skills, Your Story,
                 Your Next Job - All In One.
               </h3>
-              <Link to={'/steps'} className="btn text-light" style={{backgroundColor:'#9b7856'}}>MAKE YOUR RESUME</Link>
+              <Link to={'/steps'} className="btn text-light" style={{backgroundColor:'#9b7856'}}>Make Your RESUME with AI</Link>
           </div>
           <div className="col-lg-4"></div>
         </div>
       </div>
       {/* tools */}
       <div className="container mb-5">
-        <h1 className="text-center my-5">Tools</h1>
+        <h1 className="text-center my-5">What's AI rBuilder</h1>
         <div className="row align-items-center ">
           <div className="col-lg-1"></div>
           <div className="col-lg-5">
-            <h5>Resume</h5>
-            <p>Create unlimited new resumes and easily edit them afterwards.</p>
-            <h5>Cover Letters</h5>
-            <p> Easily write professional cover letters.</p>
-            <h5>Jobs</h5>
-            <p> Automatically receive new and relevant job postings.</p>
-            <h5>Applications</h5>
-            <p>Effortlessly manage and track your job applications in an organized manner.</p>
+            <p>An AI Powered Resume Builder is a web application that helps users create professional resumes quickly and efficiently using artificial intelligence. Traditional resume creation can be time-consuming and difficult, especially for freshers who may not know the correct format or keywords required for modern recruitment systems.</p>
+            <p>This platform uses AI technology to automatically generate, optimize, and format resumes based on user input such as personal details, skills, education, and work experience. The system can suggest job-specific keywords, professional summaries, and skill recommendations to make the resume more effective and ATS (Applicant Tracking System) friendly.</p>
+            <p>The main goal of the AI Powered Resume Builder is to simplify the resume creation process and help job seekers build professional, well-structured resumes in a few minutes. Users can select templates, edit content, preview their resume, and download it in formats such as PDF or DOCX.</p>
+            <p>This type of system is especially useful for students & fresh graduates,  who want to create high-quality resumes that increase their chances of getting shortlisted for job interviews.</p>
           </div>
            <div className="col-lg-1"></div>
           <div className="col-lg-5">
