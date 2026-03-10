@@ -22,7 +22,7 @@ function Header() {
             sx={{ mr: 2 }}
           >
             {/* icon */}
-            <img width={'40px'}  src="https://icon-library.com/images/resume-icon/resume-icon-16.jpg" alt="icon" />
+            <img width={'40px'}  src="https://png.pngtree.com/png-clipart/20220124/original/pngtree-creative-hand-drawn-screening-resume-png-image_7177952.png" alt="icon" />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link to={'/'} className="text-light text-decoration-none" >rBuilder</Link>
