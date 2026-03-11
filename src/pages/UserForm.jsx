@@ -9,7 +9,7 @@ function UserForm() {
         <div className="col-lg-6">
           <UserInputs/>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 mt-md-0 mt-5">
           <Preview/>
         </div>
       </div>

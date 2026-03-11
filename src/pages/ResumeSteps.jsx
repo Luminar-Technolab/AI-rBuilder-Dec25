@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function ResumeSteps() {
   return (
-    <div style={{height:'80vh'}} className='my-5'>
+    <div style={{minHeight:'80vh'}} className='my-5'>
       <h1 className="text-center">Create an ATS Friendly Resume in Minutes with AI</h1>
       <div className="container my-5">
         <div className="row">
@@ -17,7 +17,7 @@ function ResumeSteps() {
             <h5>Step 1</h5>
           </div>
           <div className="col-md-2"></div>
-          <div className="col-md-4 rounded p-5 shadow text-center">
+          <div className="col-md-4 rounded p-5 shadow text-center mt-md-0 mt-5">
             <FaFileDownload className='fs-1 text-danger mb-3'/>
             <h4>Download your Resume</h4>
             <p>Download PDF and start applying</p>

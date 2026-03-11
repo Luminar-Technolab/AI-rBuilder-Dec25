@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div style={{height:'350px',backgroundColor:'#9b7856'}} className='container-fluid text-light p-5' >
+    <div style={{minHeight:'350px',backgroundColor:'#9b7856'}} className='container-fluid text-light p-5' >
       <div className="row ">
         <div className="col-lg-4">
           <h4 className='mb-3'>AI rBuilder</h4>

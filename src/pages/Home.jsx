@@ -9,7 +9,7 @@ function Home() {
       <div style={{height:'100vh',backgroundImage:'url("/landing.png")',backgroundSize:'cover',backgroundPosition:'center',backgroundAttachment:'fixed'}} className='d-flex justify-content-center align-items-center'>
         <div className="row container-fluid">
           <div className="col-lg-4"></div>
-          <div className="col-lg-4 rounded shadow p-5 text-center text-light" style={{backgroundColor:'rgba(151,152,143,0.7)'}}>
+          <div className="col-lg-4 rounded shadow p-5 text-center text-light " style={{backgroundColor:'rgba(151,152,143,0.7)'}}>
               <h3>Designed To Get Hired.
                 Your Skills, Your Story,
                 Your Next Job - All In One.
@@ -25,9 +25,9 @@ function Home() {
         <div className="row align-items-center ">
           <div className="col-lg-1"></div>
           <div className="col-lg-5">
-            <p>An AI Powered Resume Builder is a web application that helps users create professional resumes quickly and efficiently using artificial intelligence. Traditional resume creation can be time-consuming and difficult, especially for freshers who may not know the correct format or keywords required for modern recruitment systems.</p>
-            <p>This platform uses AI technology to automatically generate, optimize, and format resumes based on user input such as personal details, skills, education, and work experience. The system can suggest job-specific keywords, professional summaries, and skill recommendations to make the resume more effective and ATS (Applicant Tracking System) friendly.</p>
-            <p>The main goal of the AI Powered Resume Builder is to simplify the resume creation process and help job seekers build professional, well-structured resumes in a few minutes. Users can select templates, edit content, preview their resume, and download it in formats such as PDF or DOCX.</p>
+            <p>An AI rBuilder is a web application that helps users create professional resumes quickly and efficiently using artificial intelligence. Traditional resume creation can be time-consuming and difficult, especially for freshers who may not know the correct format or keywords required for modern recruitment systems.</p>
+            <p>The system can suggest job-specific keywords, professional summaries, and skill recommendations to make the resume more effective and ATS (Applicant Tracking System) friendly.</p>
+            <p>The main goal of the AI rBuilder is to simplify the resume creation process and help job seekers build professional, well-structured resumes in a few minutes. Users can edit content, preview their resume, and download it in formats such as PDF.</p>
             <p>This type of system is especially useful for students & fresh graduates,  who want to create high-quality resumes that increase their chances of getting shortlisted for job interviews.</p>
           </div>
            <div className="col-lg-1"></div>
