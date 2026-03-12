@@ -29,7 +29,7 @@ function Edit() {
 
   return (
     <div>
-      <button onClick={handleOpen}  className="btn  text-primary fs-2 me-2" ><MdEditDocument /></button>
+      <button onClick={handleOpen}  className="btn  fs-2 me-2" style={{color:'#8d8076'}}><MdEditDocument /></button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -85,7 +85,7 @@ function Edit() {
                 <h5>Added Skills :</h5>
                 {/* display all existing skill */}
                 <div className="p-3 d-flex justify-content-between  flex-wrap">
-                    <Button variant='contained' className='my-1'>skill <FaXmark className='ms-1'/> </Button>
+                    <Button variant='contained ' sx={{backgroundColor:'#c89d74',color:'white'}} className='my-1'>skill <FaXmark className='ms-1'/> </Button>
                 </div>
             </div>
             {/* summary */}
@@ -96,7 +96,7 @@ function Edit() {
                 </div>
             </div>
             {/* Update */}
-            <button className="btn btn-primary">Update</button>
+            <button className="btn text-light " style={{backgroundColor:'#455b6b'}}>Update</button>
           </Box>
         </Box>
       </Modal>

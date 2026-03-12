@@ -642,5 +642,10 @@
         - Navigation links are created with <Link> or <NavLink>, which prevent full-page refreshes and maintain client-side performance.
     26. API Call in React
         - Using Fetch method
+        - Using Axios library : Promise based HTTP client for the browser and node.js
+            - Install : npm install axios
+
+    27. Data Sharing Techniques 
+        - State Lifting : State will be lifted to the common parent so parent share data using props between child components
 
                 

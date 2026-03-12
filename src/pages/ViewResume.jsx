@@ -15,15 +15,15 @@ function ViewResume() {
           {/* icon set */}
           <div className="d-flex justify-content-center align-items-center ">
             {/* download */}
-            <button className="btn  text-primary fs-2 me-2"> <FaFileDownload/> </button>
+            <button className="btn  fs-3 me-2" style={{color:'#455b6b'}}> <FaFileDownload/> </button>
             {/* edit */}
             <Edit/>
             {/* history */}
-            <Link to={'/downloads'} className="btn  text-danger fs-2 me-2"> <IoMdRefresh/> </Link>
+            <Link to={'/downloads'} className="btn  fs-2 me-2" style={{color:'#14151a'}}> <IoMdRefresh/> </Link>
             {/* back */}
-            <Link to={'/form'} className="btn  text-success fs-2 me-2"> <FaBackward/> </Link>
+            <Link to={'/form'} className="btn fs-2 me-2" style={{color:'#4c4541'}}> <FaBackward/> </Link>
           </div>
-          <div className='mt-5'> <Preview/> </div>
+          <div className=' p-5'> <Preview/> </div>
         </div>
         <div className="col-lg-2"></div>
       </div>
