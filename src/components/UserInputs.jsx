@@ -13,14 +13,17 @@ import Select from '@mui/material/Select';
 import jobTypes from '../assets/jobRole.json';
 import skillJSON from '../assets/jobSkills.json';
 import summaryJSON from '../assets/summaries.json';
+import { addResumeAPI } from '../services/allResumeApiService';
+import { useNavigate } from 'react-router-dom';
 
 
 const steps = ['Basic Informations', 'Contact Details', 'Educational Details','Review & Submit'];
 
 
 function UserInputs({resumeData,setResumeData}) {
+  const navigate = useNavigate()
   const [activeStep, setActiveStep] = React.useState(0);
-  console.log(resumeData);
+  // console.log(resumeData);
   
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -91,6 +94,22 @@ function UserInputs({resumeData,setResumeData}) {
     }
   }
 
+  const handleAddResume = async ()=>{
+    const {fullName,location,job,email,phone,linkedin,github,degree,university,passOut,skills,summary} = resumeData
+    if(fullName && location && job && email && phone && linkedin && github && degree && university && passOut && skills.length>0 && summary){
+      //api call
+      const response = await addResumeAPI(resumeData)
+      console.log(response);
+      if(response.status==201){
+        alert("Resume added successfully!!!")
+        const resumeId = response.data.id
+        // navigate to view Resume
+        navigate(`/resume/${resumeId}/view`)
+      }
+    }else{
+      alert("Please fill the form completely!!")
+    }
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -112,7 +131,7 @@ function UserInputs({resumeData,setResumeData}) {
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
-            <Button >FINISH</Button>
+            <Button onClick={handleAddResume}>FINISH</Button>
           </Box>
         </React.Fragment>
       ) : (
