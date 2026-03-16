@@ -18,7 +18,7 @@ function Preview({resumeData}) {
         {/* duplicate according to user skill */}
         {
           resumeData?.skills?.map((item,index)=>(
-            <><Button key={index} variant="text" className='text-dark'>{item}</Button> , </>
+            <span key={index} ><Button variant="text" className='text-dark'>{item}</Button>{index!=resumeData?.skills?.length-1 && ','} </span>
           ))
         }
         <Divider className='bg-dark my-3'/>

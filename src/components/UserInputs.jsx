@@ -24,7 +24,7 @@ function UserInputs({resumeData,setResumeData}) {
   const navigate = useNavigate()
   const [activeStep, setActiveStep] = React.useState(0);
   // console.log(resumeData);
-  
+
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -101,6 +101,7 @@ function UserInputs({resumeData,setResumeData}) {
       const response = await addResumeAPI(resumeData)
       console.log(response);
       if(response.status==201){
+        
         alert("Resume added successfully!!!")
         const resumeId = response.data.id
         // navigate to view Resume
@@ -162,6 +163,8 @@ function UserInputs({resumeData,setResumeData}) {
           </Box>
         </React.Fragment>
       )}
+
+     
     </Box>
   );
 }
