@@ -66,7 +66,7 @@ function ViewResume() {
             {/* download */}
             <button onClick={downloadResume} className="btn  fs-3 me-2" style={{color:'#455b6b'}}> <FaFileDownload/> </button>
             {/* edit */}
-            <Edit/>
+            <Edit resumeData={resumeData} setResumeData={setResumeData}/>
             {/* history */}
             <Link to={'/downloads'} className="btn  fs-2 me-2" style={{color:'#14151a'}}> <IoMdRefresh/> </Link>
             {/* back */}

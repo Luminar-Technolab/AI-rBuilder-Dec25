@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IoArrowBackSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
-import { getDownloadResumeAPI } from '../services/allResumeApiService';
+import { deleteDownloadResumeAPI, getDownloadResumeAPI } from '../services/allResumeApiService';
 
 function Downloads() {
 
@@ -21,6 +21,11 @@ function Downloads() {
     }
   }
 
+  const removeDownload = async (id)=>{
+    await deleteDownloadResumeAPI(id)
+    getAllDownloads()
+  }
+
   return (
     <div className='container'>
       <div className='d-flex my-5 justify-content-between align-items-center'>
@@ -28,17 +33,24 @@ function Downloads() {
         <Link to={'/form'}> <IoArrowBackSharp/> Back</Link>
       </div>
       <div className="row mb-5">
-        <div className="col-lg-4">
-          <div style={{height:'400px'}} className="shadow p-3 rounded">
-            <div className='d-flex justify-content-between align-items-center'>
-              <h5>Review at : time</h5>
-              <button className="btn fs-5 text-danger"> <MdDelete/> </button>
+       {
+        allDownloads.length>0 ?
+          allDownloads?.map(resume=>(
+             <div key={resume?.id} className="col-lg-4 mb-3">
+              <div style={{height:'300px'}} className="shadow p-3 rounded">
+                <div className='d-flex justify-content-between align-items-center'>
+                  <h6>Review at : {resume?.timeStamp}</h6>
+                  <button onClick={()=>removeDownload(resume?.id)} className="btn fs-5 text-danger"> <MdDelete/> </button>
+                </div>
+                <div className="mt-3 text-center">
+                 <Link to={`/resume/${resume?.resumeId}/view`}> <img height={'200px'} width={'200px'} src={resume?.resumeImg} alt="downloded cv image" /></Link>
+                </div>
+              </div>
             </div>
-            <div className="mt-3 text-center">
-              <img height={'300px'} width={'200px'} src="https://marketplace.canva.com/EAFjRZP7Qy4/1/0/1131w/canva-minimalist-modern-professional-cv-resume-xkDELtpQH94.jpg" alt="cv" />
-            </div>
-          </div>
-        </div>
+          ))
+        :
+        <div className='text-center fw-bolder my-5'>No Resumes are downloaded yet!!!....</div>
+       }
       </div>
     </div>
   )
