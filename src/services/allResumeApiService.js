@@ -24,3 +24,8 @@ export const getDownloadResumeAPI = async ()=>{
 export const deleteDownloadResumeAPI = async (resumeId)=>{
    return await apiService("DELETE",`/downloads/${resumeId}`,{})
 }
+
+//edit resume api called by edit compoennet when update btn clicked
+export const editResumeAPI = async (id,updateDetails)=>{
+   return await apiService("PUT",`/allResumes/${id}`,updateDetails)
+}
