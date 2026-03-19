@@ -28,12 +28,51 @@ function ViewResume() {
   }
  }
 
- const downloadResume = async ()=>{
+//  const formData = new FormData();
+    // formData.append("file", blob);
+    // formData.append("upload_preset", "YOUR_UPLOAD_PRESET");
+
+    // const res = await fetch(
+    //   "https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/image/upload",
+    //   {
+    //     method: "POST",
+    //     body: formData,
+    //   }
+    // );
+
+    // const data = await res.json();
+    // console.log("Cloudinary URL:", data.secure_url);
+
+//  const downloadResume = async ()=>{
+//   const previewTag = previewRef.current
+//   const canvas = await html2canvas(previewTag)
+//   //to generate short img url
+//   canvas.toBlob(blob=>{
+//     const shortUrl = URL.createObjectURL(blob)
+//     generatePDF(shortUrl)
+//   }) 
+//  }
+
+const downloadResume = async ()=>{
   const previewTag = previewRef.current
   const canvas = await html2canvas(previewTag)
   //to generate short img url
-  canvas.toBlob(blob=>{
-    const shortUrl = URL.createObjectURL(blob)
+  canvas.toBlob(async(blob)=>{
+    const formData = new FormData();
+
+    formData.append("file", blob);
+    formData.append("upload_preset", "my_preset");
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/dkieulw0f/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const data = await res.json();
+    const shortUrl = data.secure_url
+    //  console.log("Cloudinary URL:", data.secure_url);
     generatePDF(shortUrl)
   }) 
  }
